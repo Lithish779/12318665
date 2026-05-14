@@ -1,0 +1,97 @@
+/* index.css */
+:root {
+  --bg: #0d0d10;
+  --bg-card: #16161c;
+  --text-1: #e8e8f0;
+  --text-2: #8888a8;
+  --accent: #5c6eff;
+  --placement: #ff9500;
+  --result: #30d158;
+  --event: #0a84ff;
+  --border: #252530;
+  --radius: 10px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text-1);
+  line-height: 1.6;
+}
+
+.app-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.notif-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.notif-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  display: flex;
+  gap: 15px;
+  transition: transform 0.2s;
+}
+
+.notif-card:hover { transform: translateY(-2px); }
+
+.type-dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  margin-top: 6px;
+}
+
+.Placement { background: var(--placement); }
+.Result { background: var(--result); }
+.Event { background: var(--event); }
+
+.message { font-size: 0.95rem; font-weight: 500; }
+.meta {
+  font-size: 0.75rem;
+  color: var(--text-2);
+  margin-top: 5px;
+  display: flex;
+  gap: 10px;
+}
+
+.filter-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tab {
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-2);
+  cursor: pointer;
+}
+
+.tab.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+}
